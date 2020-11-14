@@ -1,5 +1,8 @@
-# HW-02
+# Java_A_Beginner_Guide
 
-Author: Student Name
+This is a simple repo where I keep all my work on the book : "Java, a Beginner Guide".
+The implementation of the examples might be slightly different from the book as I go along and try to reimplement them.
 
-![HW-02](https://github.com/vasart/potential-happiness/workflows/HW-02/badge.svg)
+Check if everything compiles and respects the style imposed by our gradle settings:
+
+![A_Beginner_Guide](https://github.com/IAbeteEtMechante/Java_A_Beginner_Guide/workflows/A_Beginner_Guide/badge.svg)
