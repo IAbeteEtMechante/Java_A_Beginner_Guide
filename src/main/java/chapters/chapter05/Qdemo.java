@@ -1,43 +1,28 @@
 package chapters.chapter05;
 
-public class Qdemo {
-    int left;
-    int right;
-    int arraySize;
-    char[] underlyingArray;
+//Demonstrate the Queue class
 
-    Qdemo(int left, int right, int arraySize) {
-        this.left = left;
-        this.right = right;
-        this.arraySize = arraySize;
-        this.underlyingArray = new char[arraySize];
-    }
-
-    public char add(char c) {
-        if (this.right == this.arraySize) {
-            System.out.println("Cannot add, the queue is full already");
-            return '\0';
-        } else {
-            this.underlyingArray[this.right++] = c;
-            return c;
-        }
-    }
-
-    public char getElement() {
-        if (this.left == this.right) {
-            System.out.println("Cannot get anything, the queue is empty.");
-            return '\0';
-        } else {
-            return this.underlyingArray[left++];
-        }
-    }
-
-
+class Qdemo {
     public static void main(String[] args) {
-        Qdemo myQdemo = new Qdemo(0, 0, 10);
-        myQdemo.add('H');
-        char c = myQdemo.getElement();
-        System.out.println(c);
+
+        Queue bigQueue = new Queue(100);
+        Queue smallQueue = new Queue(4);
+
+        //try to store the alphabet in it
+        for (int i = 0; i < 26; i++) {
+            bigQueue.put((char) ('A' + i));
+        }
+        for (int i = 0; i < 26; i++) {
+            System.out.print(bigQueue.getElement());
+        }
+        System.out.println();
+        for (int i = 0; i < 5; i++) {
+            smallQueue.put((char) ('A' + i));
+        }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(smallQueue.getElement());
+        }
+        System.out.println();
 
     }
 }
