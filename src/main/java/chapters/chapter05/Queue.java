@@ -17,13 +17,12 @@ class Queue {
         this.underlyingArray = new char[arraySize];
     }
 
-    public char put(char c) {
+    public void put(char c) {
         if (this.right == this.arraySize) {
             System.out.println("Cannot add, the queue is full already");
-            return '\0';
+
         } else {
             this.underlyingArray[this.right++] = c;
-            return c;
         }
     }
 
