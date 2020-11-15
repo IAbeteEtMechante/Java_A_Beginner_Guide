@@ -1,0 +1,130 @@
+1. Given this fragment,
+class X {
+    private int count;
+}
+is the following fragment correct?
+class Y {
+    public static void main(String[] args) {
+        X ob = new X();
+        ob.count =10;
+    }
+}
+
+Not correct because the variable count is private.
+
+2. An access modifier must __________ a member’s declaration.
+precede
+
+3. The complement of a queue is a stack. It uses first-in, last-out accessing and is
+often likened to a stack of plates. The first plate put on the table is the last plate
+used. Create a stack class called Stack that can hold characters. Call the
+methods that access the stack push( ) and pop( ). Allow the user to specify the
+size of the stack when it is created. Keep all other members of the Stack class
+private. (Hint: You can use the Queue class as a model; just change the way the
+data is accessed.)
+
+Answer in files Stack.java and StackDemo.java
+
+4. Given this class,
+class Test {
+    int a;
+    Test(int i) {
+        a = i;
+    }
+
+}
+write a method called swap( ) that exchanges the contents of the objectsreferred to by two Test object references.
+
+    swap(Test t) {
+        int temp = a;
+        a = t.a;
+        t.a = temp;
+    }
+    
+5. Is the following fragment correct?
+
+class X {
+
+    int meth(int a, int b) { ...}
+    String meth(int a, int b) { ...}
+
+}
+
+No it is not. OVerloaded methods must have different parameters, different return type is not enough.
+
+6. Write a recursive method that displays the contents of a string backwards.
+
+void reverse(String myString) {
+    if (myString.length == 0) {
+        System.out.println();
+    } else {
+        System.out.print(myString.charAt(myString.length - 1));
+        reverse(myString.substring(0, myString.length - 1));
+    }
+}
+
+
+7. If all objects of a class need to share the same variable, how must you declare
+that variable?
+
+static
+
+8. Why might you need to use a static block?
+
+if you want to do something before using your class.
+Maybe download something from the Internet or make some calculations.
+
+9. What is an inner class?
+
+It is a class that is available only to the outer class that contains it.
+The inner class has access to all members of the outer class.
+
+10. To make a member accessible by only other members of its class, what access
+modifier must be used?
+
+private
+
+11. The name of a method plus its parameter list constitutes the method’s
+_______________.
+
+signature
+
+12. An int argument is passed to a method by using call-by-_______________.
+
+value
+
+13. Create a varargs method called sum( ) that sums the int values passed to it.
+Have it return the result. Demonstrate its use.
+
+int sums(int ... v) {
+    int sum = 0;
+    for (val : v) {
+        sum += val;
+    }
+    return sum;
+}
+
+public static void main(String[] args) {
+    System.out.println(sums(1,2,3,4));
+}
+
+14. Can a varargs method be overloaded?
+
+Yes it can, but you need to be careful
+about some case where it will be ambiguous and it can lead to errors.
+
+15. Show an example of an overloaded varargs method that is ambiguous.
+
+int sums(int ... v) {...}
+int sums(boolean ... v) {...}
+
+error if we call:
+sums(); //not clear which function to call here
+
+other case:
+int sums(int ... v) {...}
+int sums(int a, int ... v) {...}
+
+error if we call:
+sums(1,2); //not clear which function to call here again
+sums(1); //same
