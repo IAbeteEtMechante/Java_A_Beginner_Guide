@@ -1,0 +1,72 @@
+1. Show two ways to declare a one-dimensional array of 12 doubles.
+Double[] myArray = new Double[12];
+Double myArray[] = new Double[12];
+
+2. Show how to initialize a one-dimensional array of integers to the values 1
+through 5.
+//declare it first
+int[] myArray;
+myArray = {1,2,3,4,5};
+
+3. Write a program that uses an array to find the average of 10 double values. Use
+any 10 values you like.
+Double myArray = {1.0, 2.0, 3, 4, 5, 6, 7, 8, 9};
+Double average = 0;
+for (int val : myArray) {
+    average += val;
+}
+average /= 10;
+
+4. Change the sort in Try This 5-1 so that it sorts an array of strings. Demonstrate
+that it works.
+Answer is the file: BubbleString.java
+
+5. What is the difference between the String methods indexOf( ) and lastIndexOf(
+)?
+indexOf returns the first occurence if it exists.
+lastIndexOf returns the LAST occurence if it exists.
+
+6. Since all strings are objects of type String, show how you can call the length( )
+and charAt( ) methods on this string literal: "I like Java".
+"I like Java".length();
+"I like Java".charAt(5);
+
+7. Expanding on the Encode cipher class, modify it so that it uses an eight-
+character string as the key.
+answer in file: EncodeImproved.class
+
+8. Can the bitwise operators be applied to the double type?
+No
+
+9. Show how this sequence can be rewritten using the ? operator.
+if(x < 0) y = 10;
+else y = 20;
+
+y = (x < 0) ? 10 : 20;
+
+10. In the following fragment, is the & a bitwise or logical operator? Why?
+boolean a, b;
+// ...
+if (a & b) ...
+
+It is a boolean operator because a and b are booleans.
+
+11. Is it an error to overrun the end of an array? Is it an error to index an array with
+a negative value?
+Yes, they both are OutOfBound errors.
+
+12. What is the unsigned right-shift operator?
+It is shown as >>>
+it is a right-shit operator that always adds 0 to the left.
+(it is different from the right-shift operator , who adds 1 for negative numbers)
+
+13. Rewrite the MinMax class shown earlier in this chapter so that it uses a for-
+each style for loop.
+done in MinMax.class
+
+14. Can the for loops that perform sorting in the Bubble class shown in Try This 5-
+1 be converted into for-each style loops? If not, why not?
+It can not, because the for-each style loop is basically read-only.
+
+15. Can a String control a switch statement?
+Yes
