@@ -1,4 +1,4 @@
-package chapters.chapter05;
+package chapters.chapter06;
 
 //Demonstrate the Queue class
 
@@ -24,10 +24,9 @@ class Qdemo {
         }
         System.out.println();
 
-        //this note is for chapter06
-        //if we want we can access the underlyingArray
-        //because it is not private
-        smallQueue.underlyingArray[2] = 3;
+        //we cannot do that anymore:
+        //smallQueue.underlyingArray[2] = 3;
+        //we would get an error at compilation
 
     }
 }
